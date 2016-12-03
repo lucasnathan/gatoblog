@@ -1,5 +1,6 @@
 require 'api_constraints'
 ApiRails::Application.routes.draw do
+  devise_for :users
   # API definition
   namespace :api, defaults: { format: :json },
     constraints:{subdomain:'api'}, path: '/' do
