@@ -1,24 +1,24 @@
 # gatoblog
+
 =======
-This README would normally document whatever steps are necessary to get the
-application up and running.
+
+This README describe whatever steps are necessary to get the application up and running.
 
 Things you may want to cover:
 
-* Ruby version
+- Install docker engine;
+- Install docker compose;
+- Set the environment variables:
+  - POSTGRES_USERNAME
+  - POSTGRES_PASSWORD
 
-* System dependencies
+  edit ~/.bashrc or ~/.zshrc if you're using zsh:
+    > export POSTGRES_USERNAME=postgres_username
 
-* Configuration
+    > export POSTGRES_PASSWORD=postgres_password
 
-* Database creation
+  run: `$ source ~/.bashrc`
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- `$ docker-compose build`
+- `$ docker-compose up`
+- `$ docker-compose run web rails db:create`
